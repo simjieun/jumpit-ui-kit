@@ -1,4 +1,4 @@
-import { FC, ReactElement } from "react";
+import { ButtonHTMLAttributes, FC, ReactElement } from "react";
 import {
   ButtonVariants,
   ButtonColorSchemes,
@@ -7,7 +7,7 @@ import {
 } from "./type";
 import * as Styled from "./styled";
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size: ButtonSizes;
   colorScheme: ButtonColorSchemes;
   variant?: ButtonVariants;
