@@ -10,7 +10,7 @@ import {
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta: Meta<typeof Button> = {
-  title: "@jumpit/uikit/Button",
+  title: "@jumpit-ui-kit/Button",
   component: Button,
   tags: ["autodocs"],
   argTypes: {
