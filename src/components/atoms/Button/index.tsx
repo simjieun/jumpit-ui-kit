@@ -13,12 +13,12 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariants;
   shape?: ButtonShapes;
   children: string | ReactElement;
-  disabled?: boolean;
+  isDisabled?: boolean;
   onClick?: () => void;
 }
 
 export const Button: FC<ButtonProps> = ({
-  colorScheme = ButtonColorSchemes.PRIMARY,
+  colorScheme = "primary",
   variant,
   size,
   children,

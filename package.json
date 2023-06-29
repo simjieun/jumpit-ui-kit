@@ -1,6 +1,6 @@
 {
   "name": "jumpit-ui-kit",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "React based UI kit for jumpit",
   "type": "module",
   "main": "dist/esm/index.js",
@@ -51,5 +51,9 @@
     "react-dom": "^18.2.0",
     "styled-components": "6.0.0-rc.3"
   },
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "jumpit",
+    "jumpit-ui-kit"
+  ]
 }

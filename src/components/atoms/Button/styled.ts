@@ -8,42 +8,42 @@ import {
 
 const getButtonSize = (size: ButtonSizes) => {
   switch (size) {
-    case ButtonSizes.TINY:
+    case "tiny":
       return css`
         height: 28px;
         font-weight: 700;
         font-size: 13px;
         line-height: 20px;
       `;
-    case ButtonSizes.SMALL:
+    case "small":
       return css`
         height: 36px;
         font-weight: 700;
         font-size: 14px;
         line-height: 22px;
       `;
-    case ButtonSizes.MEDIUM:
+    case "medium":
       return css`
         height: 40px;
         font-weight: 700;
         font-size: 14px;
         line-height: 22px;
       `;
-    case ButtonSizes.LARGE:
+    case "large":
       return css`
         height: 48px;
         font-weight: 700;
         font-size: 15px;
         line-height: 24px;
       `;
-    case ButtonSizes.XLAGRE:
+    case "xlarge":
       return css`
         height: 56px;
         font-weight: 700;
         font-size: 16px;
         line-height: 24px;
       `;
-    case ButtonSizes.XXLARGE:
+    case "xxlarge":
       return css`
         height: 64px;
         font-weight: 700;
@@ -56,7 +56,7 @@ const getButtonSize = (size: ButtonSizes) => {
 };
 const getButtonColor = (colorScheme: ButtonColorSchemes) => {
   switch (colorScheme) {
-    case ButtonColorSchemes.PRIMARY:
+    case "primary":
       return css`
         background: #00dd6d;
         color: #fff;
@@ -64,7 +64,7 @@ const getButtonColor = (colorScheme: ButtonColorSchemes) => {
           background: #01c662;
         }
       `;
-    case ButtonColorSchemes.BLACK:
+    case "black":
       return css`
         background: #000;
         color: #fff;
@@ -72,7 +72,7 @@ const getButtonColor = (colorScheme: ButtonColorSchemes) => {
           background: #333;
         }
       `;
-    case ButtonColorSchemes.GRAY:
+    case "gray":
       return css`
         background: #e4e4e4;
         color: #000;
@@ -80,7 +80,7 @@ const getButtonColor = (colorScheme: ButtonColorSchemes) => {
           background: #d4d4d4;
         }
       `;
-    case ButtonColorSchemes.WHITE:
+    case "white":
       return css`
         background: #fff;
         color: #000;
@@ -94,11 +94,11 @@ const getButtonColor = (colorScheme: ButtonColorSchemes) => {
 };
 const getButtonVariant = (variant: ButtonVariants) => {
   switch (variant) {
-    case ButtonVariants.OUTLINE:
+    case "outline":
       return css`
         border: 1px solid #d4d4d4;
       `;
-    case ButtonVariants.LINK:
+    case "link":
       return css`
         border: none;
       `;
@@ -108,15 +108,15 @@ const getButtonVariant = (variant: ButtonVariants) => {
 };
 const getButtonShape = (shape: ButtonShapes) => {
   switch (shape) {
-    case ButtonShapes.SQUARE:
+    case "square":
       return css`
         border-radius: 0;
       `;
-    case ButtonShapes.ROUNDED:
+    case "rounded":
       return css`
         border-radius: 8px;
       `;
-    case ButtonShapes.CIRCLE:
+    case "circle":
       return css`
         border-radius: 50%;
       `;

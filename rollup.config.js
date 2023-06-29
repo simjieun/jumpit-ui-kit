@@ -17,6 +17,7 @@ export default [
       {
         file: pkg.exports["."].require,
         format: "cjs",
+        sourcemap: true,
       },
     ],
     plugins: [
