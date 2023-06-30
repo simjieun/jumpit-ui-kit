@@ -10,42 +10,54 @@ const getButtonSize = (size: ButtonSizes) => {
   switch (size) {
     case "tiny":
       return css`
+        min-width: 60px;
         height: 28px;
+        padding: 0 8px;
         font-weight: 700;
         font-size: 13px;
         line-height: 20px;
       `;
     case "small":
       return css`
+        min-width: 82px;
         height: 36px;
+        padding: 0 16px;
         font-weight: 700;
         font-size: 14px;
         line-height: 22px;
       `;
     case "medium":
       return css`
+        min-width: 82px;
         height: 40px;
+        padding: 0 16px;
         font-weight: 700;
         font-size: 14px;
         line-height: 22px;
       `;
     case "large":
       return css`
+        min-width: 82px;
         height: 48px;
+        padding: 0 16px;
         font-weight: 700;
         font-size: 15px;
         line-height: 24px;
       `;
     case "xlarge":
       return css`
+        min-width: 82px;
         height: 56px;
+        padding: 0 16px;
         font-weight: 700;
         font-size: 16px;
         line-height: 24px;
       `;
     case "xxlarge":
       return css`
+        min-width: 82px;
         height: 64px;
+        padding: 0 16px;
         font-weight: 700;
         font-size: 18px;
         line-height: 28px;
@@ -94,6 +106,10 @@ const getButtonColor = (colorScheme: ButtonColorSchemes) => {
 };
 const getButtonVariant = (variant: ButtonVariants) => {
   switch (variant) {
+    case "filled":
+      return css`
+        border: none;
+      `;
     case "outline":
       return css`
         border: 1px solid #d4d4d4;
@@ -130,8 +146,11 @@ export const Button = styled.button<{
   colorScheme: ButtonColorSchemes;
   variant?: ButtonVariants;
   shape?: ButtonShapes;
-  disabled?: boolean;
+  isDisabled?: boolean;
 }>`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   ${({ size }) => size && getButtonSize(size)}
   ${({ colorScheme }) => getButtonColor(colorScheme)}
   ${({ variant }) => variant && getButtonVariant(variant)}

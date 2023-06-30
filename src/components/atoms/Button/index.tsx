@@ -18,13 +18,23 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button: FC<ButtonProps> = ({
+  size,
   colorScheme = "primary",
   variant,
-  size,
+  shape,
+  isDisabled,
   children,
+  onClick,
 }) => {
   return (
-    <Styled.Button variant={variant} colorScheme={colorScheme} size={size}>
+    <Styled.Button
+      size={size}
+      colorScheme={colorScheme}
+      variant={variant}
+      shape={shape}
+      isDisabled={isDisabled}
+      onClick={onClick}
+    >
       {children}
     </Styled.Button>
   );

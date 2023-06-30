@@ -8,11 +8,23 @@ const meta: Meta<typeof Button> = {
   component: Button,
   tags: ["autodocs"],
   argTypes: {
-    size: { control: "size" },
-    colorScheme: { control: "colorScheme" },
-    variant: { control: "variant" },
-    shape: { control: "shape" },
-    disabled: { control: "disabled" },
+    size: {
+      control: "select",
+      options: ["tiny", "small", "medium", "large", "xlarge", "xxlarge"],
+    },
+    colorScheme: {
+      control: "select",
+      options: ["primary", "black", "gray", "white"],
+    },
+    variant: {
+      control: "inline-radio",
+      options: ["filled", "outline", "link"],
+    },
+    shape: {
+      control: "inline-radio",
+      options: ["square", "rounded", "circle"],
+    },
+    isDisabled: { control: "inline-radio", options: [true, false] },
   },
 } satisfies Meta<typeof Button>;
 
