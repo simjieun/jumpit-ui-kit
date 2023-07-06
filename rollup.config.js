@@ -3,6 +3,7 @@ import esbuild from "rollup-plugin-esbuild";
 import babel from "@rollup/plugin-babel";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
+import terser from "@rollup/plugin-terser";
 import pkg from "./package.json" assert { type: "json" };
 
 export default [
@@ -36,6 +37,7 @@ export default [
         extensions: [".js", ".jsx", ".ts", ".tsx"],
       }),
       typescript(),
+      terser(),
     ],
     external: ["react", "react-dom", "styled-components"],
   },
